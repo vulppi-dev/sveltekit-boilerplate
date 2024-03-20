@@ -1,0 +1,25 @@
+{
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "(?:classnames|cn|class|className|tw|tv)\\(([^)]*)\\)",
+      "[\"'`]([^'\"`]*)"
+    ],
+    [
+      "(?:class|className|tw)={([^}]*)}",
+      "[\"'`]([^'\"`]*)"
+    ],
+    "\\/\\*\\s*(?:tw|tailwind|tailwindcss)\\s*\\*\\/\\s*[\"'`]([^\"']*)",
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/build": true,
+    "**/.svelte-kit": true,
+    "**/.cache": true,
+    "**/node_modules": true,
+  }
+}
