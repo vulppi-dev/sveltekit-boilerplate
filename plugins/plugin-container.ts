@@ -24,7 +24,7 @@ export default plugin(
           flexWrap: 'wrap',
         }),
       },
-      { values: theme('containersReverse') },
+      { values: theme('containersReverse') }
     )
     matchUtilities(
       {
@@ -37,7 +37,7 @@ export default plugin(
           maxWidth: `${value}` + createPxComment(value),
         }),
       },
-      { values: theme('containersWidth') },
+      { values: theme('containersWidth') }
     )
     matchUtilities(
       {
@@ -66,18 +66,18 @@ export default plugin(
           },
         }),
       },
-      { values: theme('containersSize') },
+      { values: theme('containersSize') }
     )
     matchUtilities(
       {
-        'switcher-col': (value) => ({
+        'switcher-threshold': (value) => ({
           [`& > :nth-last-child(n + ${value}), & > :nth-last-child(n + ${value}) ~ *`]:
             {
               flexBasis: '100%',
             },
         }),
       },
-      { values: theme('switcherCols') },
+      { values: theme('switcherThreshold') }
     )
   },
   {
@@ -93,7 +93,7 @@ export default plugin(
         DEFAULT: '',
         reverse: '-reverse',
       },
-      switcherCols: createNumber(16),
+      switcherThreshold: createNumber(16),
     },
-  },
+  }
 )

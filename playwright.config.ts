@@ -8,6 +8,7 @@ const config: PlaywrightTestConfig = {
   testDir: 'tests',
   testMatch: /(.+\.)?(test|spec)\.[cm]?[jt]s/,
   fullyParallel: true,
+
   projects: [
     {
       name: 'chromium',

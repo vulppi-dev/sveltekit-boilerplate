@@ -1,15 +1,25 @@
 import { defineConfig, devices } from '@playwright/experimental-ct-svelte'
+import { svelte, vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 export default defineConfig({
   testDir: 'src',
   testMatch: /(.+\.)?comp(onent)?\.(test|spec)\.[cm]?[jt]s/,
   snapshotDir: './__snapshots__',
-  timeout: 10 * 1000,
+  timeout: 10000,
   fullyParallel: true,
   reporter: 'html',
+
   use: {
     trace: 'on-first-retry',
     ctPort: 3100,
+    ctViteConfig: {
+      assetsInclude: ['**/*.svg', '**/*.png'],
+      plugins: [
+        svelte({
+          preprocess: [vitePreprocess()],
+        }),
+      ],
+    },
   },
 
   projects: [
