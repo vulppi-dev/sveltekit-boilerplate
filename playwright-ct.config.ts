@@ -11,7 +11,6 @@ export default defineConfig({
 
   use: {
     trace: 'on-first-retry',
-    ctPort: 3100,
     ctViteConfig: {
       assetsInclude: ['**/*.svg', '**/*.png'],
       plugins: [

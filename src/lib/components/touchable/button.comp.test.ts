@@ -9,7 +9,7 @@ test('should work', async ({ mount, page }) => {
       text: 'Um title',
     },
     slots: {
-      default: 'Svelte component',
+      default: `<h1>Svelte component<h1/>`,
     },
   })
   await expect(component).toContainText('Svelte component')
