@@ -1,6 +1,6 @@
 import plugin from 'tailwindcss/plugin'
 import defaultTheme from 'tailwindcss/defaultTheme'
-import sizes from './sizes'
+import sizes from '../static/sizes'
 import { createPxComment } from './comment'
 import { createNumber } from './utils'
 
