@@ -1,5 +1,6 @@
 import { defineConfig, devices } from '@playwright/experimental-ct-svelte'
 import { svelte, vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+import { resolve } from 'path'
 
 export default defineConfig({
   testDir: 'src',
@@ -18,6 +19,11 @@ export default defineConfig({
           preprocess: [vitePreprocess()],
         }),
       ],
+      resolve: {
+        alias: {
+          $lib: resolve('./src/lib'),
+        },
+      },
     },
   },
 
